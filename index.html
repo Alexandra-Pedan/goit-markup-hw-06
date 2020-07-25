@@ -339,7 +339,7 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-address">
-                <a href="index.html" class="logo-footer"><span class="logo-web">Web</span><span class="link">Studio</span></a>
+                <a href="index.html"><span class="logo-web">Web</span><span class="logo-footer">Studio</span></a>
                 <address>
                     <span class="footer-text">г. Киев, пр-т Леси Украинки, 26</span><br>
                         <a href="mailto:info@devstudio.com">info@devstudio.com</a><br>
@@ -381,7 +381,12 @@
                     <ul class="list">
                         <li><a href="">E-email</a></li>
                         <li>
-                            <a href="" aria-label="Telegram" class="button">Подписаться</a>
+                            <button type="submit" class="subscribe">Подписаться
+                                <svg class="icon-send" width="24px" height="24px">
+                                    <use href="./img/sprite.svg#icon-icon_send"></use>
+                                </svg>
+                            </button>
+
                         </li>
                     </ul>
                 </section>
@@ -393,6 +398,21 @@
 
     </footer>
 
+    <script>
+        (() => {
+          document
+            .querySelector('.js-speaker-form')
+            .addEventListener('submit', e => {
+              e.preventDefault();
+  
+              new FormData(e.currentTarget).forEach((value, name) =>
+                console.log(`${name}: ${value}`),
+              );
+  
+              e.currentTarget.reset();
+            });
+        })();
+      </script>
 
 </body>
 </html>
