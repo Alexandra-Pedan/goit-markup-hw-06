@@ -25,15 +25,16 @@
 
                 <ul class="auth-nav">
                     <li class="aut-nav-item">
-                        <svg class="auth-nav-icon" width="16px" height="11px">
-                            <use href="./img/sprite.svg#icon-envelope"></use>
-                        </svg>
-                        <a href="mailto:info@devstudio.com" class="link">info@devstudio.com</a></li>
+                        <a href="mailto:info@devstudio.com" class="nav-link">
+                            <svg class="auth-nav-icon" width="16px" height="11px">
+                                <use href="./img/sprite.svg#icon-envelope"></use>
+                            </svg>info@devstudio.com</a></li>
+                           
                     <li class="aut-nav-item">
-                        <svg class="auth-nav-icon" width="10px" height="16px">
-                            <use href="./img/sprite.svg#icon-smartphone"></use>
-                        </svg>
-                        <a href="tel:+380961111111" class="phone">+38 096 111 11 11</a></li>
+                        <a href="tel:+380961111111" class="nav-link">
+                            <svg class="auth-nav-icon" width="10px" height="16px">
+                                <use href="./img/sprite.svg#icon-smartphone"></use>
+                            </svg>+38 096 111 11 11</a></li>
                 </ul>
             <div>
         </header>
@@ -45,7 +46,7 @@
         <section class="hero">
             <div class="container container-hero">
                 <h1 class="hero-title">Эффективные решения <br> для вашего бизнеса</h1>
-                <a href="" class="button">Заказать услугу</a>
+                <button class="button" data-modal-open>Заказать услугу</button>
             </div>
         </section>
 
@@ -340,7 +341,7 @@
         <div class="container">
             <div class="footer-address">
                 <a href="index.html"><span class="logo-web">Web</span><span class="logo-footer">Studio</span></a>
-                <address>
+                <address class="address-contacts">
                     <span class="footer-text">г. Киев, пр-т Леси Украинки, 26</span><br>
                         <a href="mailto:info@devstudio.com">info@devstudio.com</a><br>
                         <a href="tel:+380961111111">+38 096 111 11 11</a>
@@ -378,17 +379,21 @@
             <div class="footer-distribution">
                 <section>
                     <h3 class="section-footer">Подпишитесь на рассылку</h3>
-                    <ul class="list">
-                        <li><a href="">E-email</a></li>
-                        <li>
-                            <button type="submit" class="subscribe">Подписаться
-                                <svg class="icon-send" width="24px" height="24px">
-                                    <use href="./img/sprite.svg#icon-icon_send"></use>
-                                </svg>
-                            </button>
+                    <div class="list">
+                        <form>
+                            <div class="form">
+                                <label for="user-mails"></label>
+                                <input type="email" name="user-mails" id="user-mails" placeholder="E-mail" autofocus/>
+                            
+                                <button type="submit" class="subscribe">Подписаться
+                                    <svg class="icon-send" width="24px" height="24px">
+                                        <use href="./img/sprite.svg#icon-icon_send"></use>
+                                    </svg>
+                                </button>
+                            </div>  
+                        </form>
 
-                        </li>
-                    </ul>
+                    </div>
                 </section>
             </div>
         </div>
@@ -397,6 +402,42 @@
         
 
     </footer>
+    
+
+
+
+
+    <p>Оставьте свои данные, мы вам перезвоним</p>
+    <form autocomplete="off">
+        <input type="text" name="name" id="name" placeholder=" " />
+        <label for="name">Имя</label>
+<br>
+        <input type="tel" name="telephone" id="telephone" placeholder=" " />
+        <label for="telephone">Телефон</label>
+<br>
+        <input type="email" name="mail" id="mail" placeholder=" " />
+        <label for="mail">Почта</label>
+<br>
+        <textarea name="comment" id="comment" placeholder=" "></textarea>
+        <label for="comment">Комментарий</label>
+<br>
+        <label class="">
+        <input class="" type="checkbox">
+        <span class=""></span>
+                Соглашаюсь с рассылкой и принимаю <a href="#"><span class="">Условия договора</span></a>
+        </label>
+<br>
+        <button type="submit" class="">Отправить</button>
+
+
+
+
+
+    </form>
+
+
+
+
 
     <script>
         (() => {

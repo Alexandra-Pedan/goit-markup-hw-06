@@ -47,7 +47,7 @@
                     <li> <button class="list-service" type="button">Все</button></li>
                     <li> <button class="list-service" type="button">Веб-сайты</button></li>
                     <li> <button class="list-service" type="button">Приложения</button></li>
-                    <li></li> <button class="list-service" type="button">Дизайн</button></li>
+                    <li> <button class="list-service" type="button">Дизайн</button></li>
                     <li> <button class="list-service" type="button">Маркетинг</button></li>
                 </ul>
                 </nav>
@@ -159,13 +159,11 @@
     </main>
 
      <!-- Футер -->
-     
-     
      <footer class="footer">
         <div class="container">
             <div class="footer-address">
-                <a href="index.html" class="logo-footer"><span class="logo-web">Web</span><span class="link">Studio</span></a>
-                <address>
+                <a href="index.html"><span class="logo-web">Web</span><span class="logo-footer">Studio</span></a>
+                <address class="address-contacts">
                     <span class="footer-text">г. Киев, пр-т Леси Украинки, 26</span><br>
                         <a href="mailto:info@devstudio.com">info@devstudio.com</a><br>
                         <a href="tel:+380961111111">+38 096 111 11 11</a>
@@ -203,12 +201,21 @@
             <div class="footer-distribution">
                 <section>
                     <h3 class="section-footer">Подпишитесь на рассылку</h3>
-                    <ul class="list">
-                        <li><a href="">E-email</a></li>
-                        <li>
-                            <a href="" aria-label="Telegram" class="button">Подписаться</a>
-                        </li>
-                    </ul>
+                    <div class="list">
+                        <form>
+                            <div class="form">
+                                <label for="user-mails"></label>
+                                <input type="email" name="user-mails" id="user-mails" placeholder="E-mail" autofocus/>
+                            
+                                <button type="submit" class="subscribe">Подписаться
+                                    <svg class="icon-send" width="24px" height="24px">
+                                        <use href="./img/sprite.svg#icon-icon_send"></use>
+                                    </svg>
+                                </button>
+                            </div>  
+                        </form>
+
+                    </div>
                 </section>
             </div>
         </div>

@@ -124,6 +124,8 @@ body {
 .aut-nav-item:not(:first-child) {
     margin-left: 30px;
 }
+
+
 .auth-nav .link, .phone {
     font-weight: 500;
     font-size: 14px;
@@ -132,16 +134,46 @@ body {
     color: var(--primary-text-color);
 }
 
-.auth-nav-icon {
+ */
+
+.auth-nav-icon{
     fill: var(--primary-text-color);
-    background-size: contain;
+    /* background-size: contain; */
     margin-right: 10px;
-    align-items: center;
+    /* align-items: center; */
+    transition: color 250ms var(--primary-text-color);
+    
 }
 
-.auth-nav-icon:hover {
-    fill: var(--accent-color);
+.auth-nav-icon{
+    margin-right: 10px;
 }
+
+
+
+.auth-nav .nav-link{
+    padding-top: 32px;
+    padding-bottom: 32px;
+    font-style: inherit;
+    letter-spacing: 0.02em;
+    font-weight: 500;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-link:hover {
+    fill: var(--accent-color);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-link {
+    position: relative;
+    display: inline-flex;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    color: var(--primary-text-color);
+    font-weight: 500;
+}
+
 
 
 /* ****Команда****** */
@@ -180,22 +212,23 @@ body {
 .main-nav .link:hover,
 .main-nav .link:focus {
     color: var(--accent-color);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.auth-nav .link:hover,
-.auth-nav .link:focus {
+
+.auth-nav .nav-link:hover,
+.auth-nav .nav-link:focus {
     color: var(--accent-color);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.phone:hover,
-.phone:focus {
-    color: var(--accent-color);
-}
+
+
 
 
 .container {
     /* border: 1px solid #000; */
-    max-width: 1200px;
+    width: 1200px;
     padding-left: 15px;
     padding-right: 15px;
     margin-right: auto;
@@ -264,6 +297,7 @@ body {
     width: 170px;
     height: 90px;
     fill: #AFB1B8;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .client-logo:hover,
@@ -382,9 +416,7 @@ body {
     max-width: 1600px;
     margin-right: auto;
     margin-left: auto;
-    background-image: linear-gradient(rgba(47, 48, 58, 0.8), rgba(47, 48, 58, 0.8)),
-    url(/img/Header.jpg);
-    
+    background-image: linear-gradient(rgba(47, 48, 58, 0.8), rgba(47, 48, 58, 0.8)), url(/img/Header.jpg);    
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -448,6 +480,7 @@ body {
 .footer {
     padding-top: 60px;
     background: #2F303A;
+    min-height: 252px;
 }
 
 .logo-footer {
@@ -476,6 +509,10 @@ body {
     margin-top: 20px;
 }
 
+.address-contacts {
+    padding-top: 20px;
+}
+  
 .section-footer{
     font-weight: bold;
     font-size: 14px;
@@ -484,7 +521,6 @@ body {
     text-transform: uppercase;
     color: var(--primary-white-color);
     margin-bottom: 20px;
-    padding-left: 69px;
 }
 
 .footer-address {
@@ -492,6 +528,7 @@ body {
 }
 
 .footer-social {
+  
     margin-right: 94px;
 }
 
@@ -504,17 +541,21 @@ body {
     fill: var(--primary-white-color);
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 50%;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     
 }
 
 
 
 .list {
+    
     display: flex;
-    padding-left: 69px;
+    
     justify-content: center;
     align-items: center;
     margin-top: 32px;
+
+    
 }
 
 
@@ -560,6 +601,23 @@ body {
 .icon-send {
     margin-left: 10px;
 }
+
+.form input {
+    width: 358px;
+    height: 50px;
+    padding: 16px 15px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-sizing: border-box;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    background-color: #2f303a;
+    margin-right: 12px;
+}
+
+
+
+
+
 
 
 /* Portfolio */
@@ -612,7 +670,7 @@ body {
     
 }
 .portfolio-element {
-    width: 369px;
+    width: 370px;
     margin-right: 30px;
     margin-bottom: 30px;
    
