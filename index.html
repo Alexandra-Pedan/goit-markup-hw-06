@@ -404,36 +404,52 @@
     </footer>
     
 
+<!-- Модальное окно -->
+
+    <div class="backdrop is-hidden">
+    <div class="modal">
+
+        <p>Оставьте свои данные, мы вам перезвоним</p>
+
+        <form class="form-modal" autocomplete="off">
+
+            <div class="form-field">
+                <input type="text" class="form-input" name="name" id="name" placeholder=" " />
+                <label for="name">Имя</label>
+            </div>
 
 
-
-    <p>Оставьте свои данные, мы вам перезвоним</p>
-    <form autocomplete="off">
-        <input type="text" name="name" id="name" placeholder=" " />
-        <label for="name">Имя</label>
-<br>
-        <input type="tel" name="telephone" id="telephone" placeholder=" " />
-        <label for="telephone">Телефон</label>
-<br>
-        <input type="email" name="mail" id="mail" placeholder=" " />
-        <label for="mail">Почта</label>
-<br>
-        <textarea name="comment" id="comment" placeholder=" "></textarea>
-        <label for="comment">Комментарий</label>
-<br>
-        <label class="">
-        <input class="" type="checkbox">
-        <span class=""></span>
-                Соглашаюсь с рассылкой и принимаю <a href="#"><span class="">Условия договора</span></a>
-        </label>
-<br>
-        <button type="submit" class="">Отправить</button>
+            <div class="form-field">
+                <input type="tel" class="form-input" name="telephone" id="telephone" placeholder=" " />
+                <label for="telephone">Телефон</label>
+            </div>
 
 
+            <div class="form-field">
+                <input type="email" class="form-input" name="mail" id="mail" placeholder=" " />
+                <label for="mail">Почта</label>
+            </div>
 
 
+            <div class="form-field">
+                <textarea name="comment" id="comment" placeholder=" "></textarea>
+                <label for="comment">Комментарий</label>
+            </div>
+    
 
-    </form>
+
+            <label class="">
+            <input class="" type="checkbox">
+            <span class=""></span>
+                    Соглашаюсь с рассылкой и принимаю <a href="#"><span class="">Условия договора</span></a>
+            </label>
+    
+            <button type="submit" class="">Отправить</button>
+
+        
+        </form>
+    </div>
+    </div>
 
 
 
