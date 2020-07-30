@@ -404,10 +404,16 @@
     </footer>
     
 
-<!-- Модальное окно -->
+<!-- Модальное окно
 
-    <div class="backdrop is-hidden">
+    <div class="backdrop is-hidden" data-modal>
     <div class="modal">
+        <div>
+            <button class="button-close" data-modal-close>
+            <svg class="icon-close" width="30px" height="30px">
+              <use href="./img/sprite2.svg#icon-close"></use>
+            </svg></button>
+        </div>
 
         <p>Оставьте свои данные, мы вам перезвоним</p>
 
@@ -415,36 +421,49 @@
 
             <div class="form-field">
                 <input type="text" class="form-input" name="name" id="name" placeholder=" " />
-                <label for="name">Имя</label>
+                <label class="form-label" for="name">Имя</label>
+                <svg class="form-icon" width="13px" height="13px">
+                    <use href="./img/sprite2.svg#icon-name_form"></use> 
+                </svg>
+                 
             </div>
 
 
             <div class="form-field">
                 <input type="tel" class="form-input" name="telephone" id="telephone" placeholder=" " />
-                <label for="telephone">Телефон</label>
+                <label class="form-label" for="telephone">Телефон</label>
+                <svg class="form-icon" width="13px" height="13px">
+                    <use href="./img/sprite2.svg#icon-phone_form"></use> 
+                </svg>
             </div>
 
 
             <div class="form-field">
                 <input type="email" class="form-input" name="mail" id="mail" placeholder=" " />
-                <label for="mail">Почта</label>
+                <label class="form-label" for="mail">Почта</label>
+                <svg class="form-icon" width="13px" height="13px">
+                    <use href="./img/sprite2.svg#icon-mail_form"></use> 
+                </svg>
             </div>
 
 
             <div class="form-field">
                 <textarea name="comment" id="comment" placeholder=" "></textarea>
-                <label for="comment">Комментарий</label>
+                <label class="form-label-comment" for="comment">Комментарий</label>
             </div>
     
 
-
-            <label class="">
-            <input class="" type="checkbox">
-            <span class=""></span>
-                    Соглашаюсь с рассылкой и принимаю <a href="#"><span class="">Условия договора</span></a>
+            <div class="modal-submit">
+            <label class="label-submite">
+                <input class="checkbox" type="checkbox">
+                <span>Соглашаюсь с рассылкой и принимаю</span><a href="#"><span class="circs">Условия договора</span></a>
             </label>
-    
-            <button type="submit" class="">Отправить</button>
+            </div>
+
+            <div class="button-submit">
+                <button type="submit" class="button">Отправить</button>
+            </div>  
+            
 
         
         </form>
@@ -454,22 +473,7 @@
 
 
 
-
-    <script>
-        (() => {
-          document
-            .querySelector('.js-speaker-form')
-            .addEventListener('submit', e => {
-              e.preventDefault();
-  
-              new FormData(e.currentTarget).forEach((value, name) =>
-                console.log(`${name}: ${value}`),
-              );
-  
-              e.currentTarget.reset();
-            });
-        })();
-      </script>
+    <script src="./js/modal.js"></script> -->
 
 </body>
 </html>
