@@ -817,10 +817,10 @@ body {
     background: rgba(0, 0, 0, 0.2);
 }
 
-/* .backdrop.is-hidden {
+.backdrop.is-hidden {
     opacity: 0;
     pointer-events: none;
-} */
+}
 
 .button-close {
     position: absolute;
