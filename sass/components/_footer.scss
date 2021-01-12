@@ -1,0 +1,96 @@
+footer {
+  background-color: #2f303a;
+  padding: 60px 0px;
+}
+.footer-list {
+  display: flex;
+  flex-wrap: wrap;
+  & > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  & > div:not(:last-child) {
+    margin-bottom: 60px;
+  }
+}
+
+.footer-contacts-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media screen and (min-width: 768px), (orientation: landscape) {
+  .footer-list {
+    & > div:not(:last-child) {
+      width: calc(50% - 30px);
+      margin-right: 0px;
+      margin-bottom: 60px;
+    }
+    & > div:first-child {
+      margin-right: 30px;
+    }
+    & > div:last-child {
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer-list {
+    flex-wrap: nowrap;
+    align-items: baseline;
+    justify-content: flex-start;
+    & > div {
+      display: block;
+    }
+    & > div:not(:last-child) {
+      width: calc(100% / 4);
+      margin-bottom: 0px;
+    }
+    & > div:last-child {
+      width: calc(100% / 2);
+    }
+    .footer-contacts-list {
+      display: block;
+    }
+  }
+}
+
+.footer-social {
+  margin-top: 20px;
+  justify-content: flex-start;
+  a {
+    background: $social-bg-color;
+    fill: $white-color;
+  }
+}
+.footer-contacts-list a {
+  color: $footer-contacts-color;
+  font-family: $main-font;
+  font-weight: 500;
+  font-size: 14px;
+  font-style: normal;
+  transition: color $transition-fuction;
+  &:hover,
+  &:focus {
+    color: $main-color;
+  }
+}
+.footer-contacts-list li {
+  color: $white-color;
+  font-family: $main-font;
+  font-weight: 500;
+  font-size: 14px;
+  font-style: normal;
+  padding-top: 17px;
+}
+.footer-list-item {
+  color: $white-color;
+  font-family: $main-font;
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+}

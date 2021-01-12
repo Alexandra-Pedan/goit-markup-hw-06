@@ -1,0 +1,98 @@
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: white;
+  & > div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0px;
+
+    width: calc(100% - 30px);
+    margin: 0px auto 0px;
+  }
+}
+.drop-down-button {
+  border: none;
+  outline: none;
+  background: white;
+  display: block;
+  margin-left: auto;
+  fill: $black-color;
+  transition: fill $transition-fuction;
+  width: 40px;
+  height: 40px;
+  &:hover,
+  &:focus {
+    fill: $main-color;
+  }
+}
+.drop-down-icon {
+  width: 24px;
+  height: 16px;
+  & .open {
+    display: none;
+  }
+}
+.is-hidden {
+  & .drop-down-menu {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  & + .drop-down-button {
+    .open {
+      display: block;
+    }
+    .close {
+      display: none;
+    }
+  }
+}
+.drop-down-menu {
+  position: absolute;
+  top: 60px;
+  left: 0px;
+  width: 100%;
+  background: white;
+  border-top: 1px solid #ececec;
+  transform: translateY(0);
+  opacity: 1;
+  transition: transform $transition-fuction, opacity $transition-fuction;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.16), 0px 2px 4px rgba(0, 0, 0, 0.08),
+    0px 4px 8px rgba(0, 0, 0, 0.04);
+}
+@media screen and (min-width: 768px) {
+  header {
+    position: static;
+    & > div {
+      max-width: 1170px;
+      height: 80px;
+    }
+    & .drop-down-button {
+      display: none;
+    }
+
+    & .is-hidden {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: all;
+      flex-basis: 70%;
+      margin-left: 80px;
+      & > .drop-down-menu {
+        transform: translateY(0);
+        opacity: 1;
+        position: static;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        margin: 0px auto 0px;
+        box-shadow: none;
+        border: none;
+      }
+    }
+  }
+}
